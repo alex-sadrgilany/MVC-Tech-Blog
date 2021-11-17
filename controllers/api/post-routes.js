@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
     Post.findAll({
         attributes: [
             "id", 
-            "post_url", 
+            "post_text", 
             "title", 
             "created_at",
             [
@@ -52,7 +52,7 @@ router.get("/:id", (req, res) => {
         },
         attributes: [
             "id", 
-            "post_url", 
+            "post_text", 
             "title", 
             "created_at",
             [
@@ -95,7 +95,7 @@ router.get("/:id", (req, res) => {
 router.post("/", withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
-        post_url: req.body.post_url,
+        post_text: req.body.post_text,
         user_id: req.session.user_id
     })
         .then(dbPostData => res.json(dbPostData))
