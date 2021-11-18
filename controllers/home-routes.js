@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
             "created_at",
             [sequelize.literal("(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"), "vote_count"]
         ],
-        order: [["vote_count", "DESC"]],
+        order: [["created_at", "DESC"]],
         include: [
             {
                 // include each posts comments
@@ -53,6 +53,17 @@ router.get("/login", (req, res) => {
     }
     // if they're not logged in render the login.handlebars
     res.render("login");
+});
+
+// get the sign in route for the homepage
+router.get("/signup", (req, res) => {
+    // redirect users home if they're logged in already
+    if (req.session.loggedIn) {
+        res.redirect("/");
+        return;
+    }
+    // if they're not logged in render the signin.handlebars
+    res.render("signup");
 });
 
 // get a single post by id

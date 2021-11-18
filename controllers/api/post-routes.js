@@ -17,8 +17,8 @@ router.get("/", (req, res) => {
                 'vote_count'
             ]
         ],
-        // order by most votes first
-        order: [["vote_count", "DESC"]],
+        // order by most recent posts
+        order: [["created_at", "DESC"]],
         include: [
             {
                 // include all comments on each post
