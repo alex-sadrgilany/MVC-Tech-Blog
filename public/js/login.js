@@ -1,14 +1,14 @@
 async function loginFormHandler(event) {
     event.preventDefault();
 
-    const email = document.getElementById("email-login").value.trim();
-    const password = document.getElementById("password-login").value.trim();
+    const username = document.getElementById("username-signin").value.trim();
+    const password = document.getElementById("password-signin").value.trim();
 
-    if (email && password) {
+    if (username && password) {
         const response = await fetch("/api/users/login", {
             method: "post",
             body: JSON.stringify({
-                email,
+                username,
                 password
             }),
             headers: { "Content-Type": "application/json" }
@@ -23,10 +23,4 @@ async function loginFormHandler(event) {
     }
 };
 
-function redirectSignUp (event) {
-    event.preventDefault();
-    window.location.replace("/signup");
-};
-
-document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
-document.querySelector(".login-form").addEventListener("click", redirectSignUp);
+document.querySelector(".signin-form").addEventListener("submit", loginFormHandler);

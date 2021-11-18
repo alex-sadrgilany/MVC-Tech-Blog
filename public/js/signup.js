@@ -15,13 +15,13 @@ async function signupFormHandler(event) {
         });
         
         if (response.ok) {
-            alert("You have successfully signed up! You can now login with your new credentials.");
-            document.location.replace("/login");
+            document.location.replace("/dashboard");
         }
         else {
             alert(response.statusText);
         }
     }
+    console.log("testing")
 };
 
 document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);
