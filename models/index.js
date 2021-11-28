@@ -12,7 +12,8 @@ User.hasMany(Post, {
 
 // a post can only belong to one single user
 Post.belongsTo(User, {
-    foreignKey: "user_id"
+    foreignKey: "user_id",
+    onDelete: "CASCADE"
 });
 
 // a user can vote on many different posts
@@ -51,22 +52,26 @@ Post.hasMany(Vote, {
 
 // a particular comment belongs to one single user
 Comment.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: "CASCADE"
 });
 
 // a particular comment belongs to one single post
 Comment.belongsTo(Post, {
-    foreignKey: 'post_id'
+    foreignKey: 'post_id',
+    onDelete: "CASCADE"
 });
 
 // a user can create many different comments
 User.hasMany(Comment, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: "CASCADE"
 });
 
 // a post can have many different comments
 Post.hasMany(Comment, {
-    foreignKey: 'post_id'
+    foreignKey: 'post_id',
+    onDelete: "CASCADE"
 });
 
 module.exports = { User, Post, Vote, Comment };
