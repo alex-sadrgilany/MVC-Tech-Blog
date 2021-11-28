@@ -25,22 +25,29 @@ https://mvc014-tech-blog.herokuapp.com/
 ## Screenshots
 
 Homepage
+
 ![Application's homepage](./assets/images/homepage_screenshot.PNG)
 
 Login Page
+
 ![Login page](./assets/images/login_screenshot.PNG)
 
 Signup Page
+
 ![Signup page](./assets/images/signup_screenshot.PNG)
 
 Dashboard Page
+
 ![Dashboard page](./assets/images/dashboard_screenshot.PNG)
 
 Adding Comment
+
 ![Adding comment](./assets/images/comment_screenshot.PNG)
 
 Comment Saved
+
 ![Comment saved](./assets/images/comment_saved_screenshot.PNG)
+
 
 ## Installation
 
