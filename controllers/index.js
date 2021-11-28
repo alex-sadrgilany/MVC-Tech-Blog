@@ -4,8 +4,8 @@ const homeRoutes = require("./home-routes");
 const dashboardRoutes = require("./dashboard-routes");
 
 // use these defined prefixes for various routes
-router.use("/api", apiRoutes);
 router.use("/", homeRoutes);
+router.use("/api", apiRoutes);
 router.use("/dashboard", dashboardRoutes);
 
 // return 404 status and end if any other routes are tried
