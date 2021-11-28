@@ -6,8 +6,8 @@
         <p>{{post_text}}</p>
     </div>
     <div class="meta">
-        {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on
-        {{format_date created_at}}
+        {{vote_count}} {{format_plural "point" vote_count}} by <span class="username-span">{{user.username}}</span> on
+        <span class="date-span">{{format_date created_at}}</span>
         |
         <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </div>

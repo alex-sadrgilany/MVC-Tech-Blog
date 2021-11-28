@@ -120,6 +120,14 @@ main {
     margin-left: 16px;
 }
 
+.username-span {
+    color: orange;
+}
+
+.date-span {
+    color: darkblue;
+}
+
 .btn-no-style:hover {
     background: none;
     color: #3486eb;
