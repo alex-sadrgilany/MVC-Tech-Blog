@@ -4,9 +4,13 @@
     Edit Post
   </h2>
   <form class="edit-post-form">
+    <h3>Title</h3>
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
-      {{!-- <span>({{format_url post.post_url}})</span> --}}
+    </div>
+    <h3>Blog Content</h3>
+    <div>
+      <textarea name="post-text" type="text">{{post.post_text}}</textarea>
     </div>
     <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}

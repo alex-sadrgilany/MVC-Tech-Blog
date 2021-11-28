@@ -7,6 +7,7 @@ const sequelize = require("./config/connection");
 const sess = {
     secret: "I like oreos",
     cookie: {
+        // setting the session to expire after 30 minutes
         maxAge: 1000 * 60 * 30
     },
     resave: false,
