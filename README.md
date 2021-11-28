@@ -12,7 +12,7 @@ Users can also vote on a post if they like it, but they can only vote on a post 
 
 There are some other features and I invite you to explore them all here on the deployed application: 
 
-https://mvc014-tech-blog.herokuapp.com/
+https://sheltered-ravine-80057.herokuapp.com/
 
 ## Table of Contents
 
